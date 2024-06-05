@@ -47,6 +47,7 @@ local colors = {
     ["@tag"] = { fg = "#A39EFA" },
     ["@type.definition"] = { fg = "#A39EFA" },
     ["@variable"] = { fg = "#FDFDF7" },
+    ["@type.builtin.c"] = { fg = "#8E95F0" },
 
     -- PATCH_CLOSE
     -- content here will not be touched

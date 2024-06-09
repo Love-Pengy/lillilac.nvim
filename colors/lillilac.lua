@@ -1,8 +1,8 @@
 -- colors/colorscheme.lua
 
 local colors = {
-    -- content here will not be touched
-    -- PATCH_OPEN
+	-- content here will not be touched
+	-- PATCH_OPEN
 Normal = {fg = "#C4C5E9", bg = "None"},
 Boolean = {fg = "#765673"},
 Character = {fg = "#C4C5E9"},
@@ -12,6 +12,8 @@ Constant = {fg = "#B657FF"},
 CursorLine = {bg = "#18193F"},
 CursorLineNr = {fg = "#9B88E2"},
 Define = {fg = "#765674"},
+DiagnosticVirtualTextError = {fg = "#FF0000"},
+DiagnosticVirtualTextWarn = {fg = "#E5E619"},
 EndOfBuffer = {fg = "#FA9EBD"},
 Exception = {fg = "#B440D4"},
 Float = {fg = "#F25AE5"},
@@ -49,16 +51,21 @@ Visual = {fg = "#22740B", bg = "#9B88E2"},
 ["@type.builtin"] = {fg = "#8E95F0"},
 ["@type.definition"] = {fg = "#8E95F0"},
 ["@variable"] = {fg = "#FDFDF7"},
-    -- PATCH_CLOSE
-    -- content here will not be touched
+	-- PATCH_CLOSE
+	-- content here will not be touched
 }
 
 -- colorschemes generally want to do this
 vim.cmd("highlight clear")
 vim.cmd("set t_Co=256")
 vim.cmd("let g:colors_name='my_theme'")
-
+--[[
+vim.api.nvim_set_hl(0, "DiagnosticErrorLn", { bg = "#330000" })
+vim.api.nvim_set_hl(0, "DiagnosticWarningLn", { bg = "#727212" })
+vim.api.nvim_set_hl(0, "DiagnosticInfoLn", { bg = "#00afaf" })
+vim.api.nvim_set_hl(0, "DiagnosticHintLn", { bg = "#00af00" })
+--]]
 -- apply highlight groups
 for group, attrs in pairs(colors) do
-    vim.api.nvim_set_hl(0, group, attrs)
+	vim.api.nvim_set_hl(0, group, attrs)
 end

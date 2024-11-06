@@ -9,9 +9,8 @@ A lilac inspired neovim theme
 For Lazy add the following to your plugins.lua file or return it in its own file. 
 
 ```lua
-{
+return {
 	"love-pengy/lillilac.nvim",
-	opts = { lazy = true },
 	config = function(opts)
 		vim.cmd.colorscheme("lillilac")
 	end,

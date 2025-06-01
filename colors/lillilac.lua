@@ -34,14 +34,17 @@ local colors = {
   CursorLine = { bg = "#200f24" },
   ColorColumn = { fg = Color11 },
   SignColumn = { fg = Color10 },
-  LineNr = { bg = Color12 },
+  LineNr = { bg = "#030303", fg = Color12 },
   TabLine = { bg = Color13, fg = Color14 },
   TabLineFill = { bg = Color13, fg = Color14 },
   TSPunctDelimiter = { fg = Color9 },
-  Constant = { fg = Color1 },
+  Constant = { fg = Color9 },
   Special = { fg = Color9 },
   Operator = { fg = Color4 },
   PreProc = { fg = Color1 },
+  Identifier = { fg = Color9 },
+
+  -- Semantic Tokens
   ["@variable"] = { fg = Color9 },
 
   -- c
@@ -56,6 +59,7 @@ local colors = {
   -- ["@lsp.typemod.class.globalScope.c"] = {fg = Color15},
   ["@lsp.mod.defaultLibrary.c"] = { fg = Color15 },
   ["@lsp.typemod.function.defaultLibrary.c"] = { fg = Color1 },
+  ["@lsp.typemod.macro.declaration.c"] = { fg = Color1 },
 }
 
 

@@ -43,6 +43,7 @@ local colors = {
   Operator = { fg = Color4 },
   PreProc = { fg = Color1 },
   Identifier = { fg = Color9 },
+  Other = {fg = Color3},
 
   -- Semantic Tokens
   ["@variable"] = { fg = Color9 },
@@ -56,10 +57,13 @@ local colors = {
   ["@keyword.return.c"] = { fg = Color4 },
   ["@keyword.type.c"] = { fg = Color15 },
   ["@lsp.type.class.c"] = { fg = Color9 },
+  ["@keyword.import.c"] = { fg = Color4 }, 
   -- ["@lsp.typemod.class.globalScope.c"] = {fg = Color15},
   ["@lsp.mod.defaultLibrary.c"] = { fg = Color15 },
   ["@lsp.typemod.function.defaultLibrary.c"] = { fg = Color1 },
   ["@lsp.typemod.macro.declaration.c"] = { fg = Color1 },
+  ["@keyword.conditional.c"] = { fg = Color4 },
+  ["@keyword.directive.c"] = {fg = Color4}
 }
 
 
